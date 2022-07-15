@@ -30,14 +30,6 @@ function App() {
               }}
             />
           }
-          rightChild={
-            <MyButton
-              text={"오른쪽 버튼"}
-              onClick={() => {
-                alert("오른쪽클릭");
-              }}
-            />
-          }
         />
         {/* 이미지 불러오기 
         <img src={env + `/assets/emotion1.png`}></img>

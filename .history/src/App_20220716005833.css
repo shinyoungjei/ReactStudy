@@ -95,17 +95,3 @@ header .head_text {
   font-size: 25px;
   justify-content: center;
 }
-
-header .head_btn_left {
-  width: 25%;
-  justify-content: start;
-}
-
-header .head_btn_right {
-  width: 25%;
-  justify-content: end;
-}
-
-header button {
-  font-family: "Nanum Pen Script";
-}

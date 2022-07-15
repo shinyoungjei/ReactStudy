@@ -48,8 +48,6 @@ body {
   border: none;
   border-radius: 5px;
 
-  margin-top: 20px;
-
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -94,18 +92,4 @@ header .head_text {
   width: 50%;
   font-size: 25px;
   justify-content: center;
-}
-
-header .head_btn_left {
-  width: 25%;
-  justify-content: start;
-}
-
-header .head_btn_right {
-  width: 25%;
-  justify-content: end;
-}
-
-header button {
-  font-family: "Nanum Pen Script";
 }

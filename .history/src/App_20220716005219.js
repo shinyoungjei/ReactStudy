@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import RouteTest from "./components/RouteTest";
 
-import MyHeader from "./components/MyHeader";
-
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
 import Home from "./pages/Home";
@@ -20,25 +18,7 @@ function App() {
     // 감싸져 있는 부분은 BrowserUrl과 mapping되어 있다.
     <BrowserRouter>
       <div className="App">
-        <MyHeader
-          headText={"App"}
-          leftChild={
-            <MyButton
-              text={"왼쪽버튼"}
-              onClick={() => {
-                alert("왼쪽클릭");
-              }}
-            />
-          }
-          rightChild={
-            <MyButton
-              text={"오른쪽 버튼"}
-              onClick={() => {
-                alert("오른쪽클릭");
-              }}
-            />
-          }
-        />
+        <MyHeader headText={"App"} />
         {/* 이미지 불러오기 
         <img src={env + `/assets/emotion1.png`}></img>
         <img src={env + `/assets/emotion2.png`}></img>
