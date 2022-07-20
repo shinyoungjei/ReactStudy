@@ -3,7 +3,6 @@ import { DiaryStateContext } from "../App";
 
 import MyHeader from "./../components/MyHeader";
 import MyButton from "./../components/MyButton";
-import DiaryList from "../components/DiaryList";
 
 const Home = () => {
   // App에서 DiaryStateContext에 data를 할당 해주었기 때문에 불러와 사용.
@@ -41,7 +40,7 @@ const Home = () => {
 
         // diaryList의 date가 firstDay와 lastDay안에 해당하는 배열을 만들어 data로 전달.
         setData(
-          diaryList.filter(it => firstDay <= it.date && it.date >= lastDay)
+          diaryList.filter(it => firstDay <= it.date && it.date <= lastDay)
         );
       }
     },
@@ -65,7 +64,7 @@ const Home = () => {
   };
 
   return (
-    <div className="Home">
+    <div>
       <MyHeader
         headText={headText}
         leftChild={
@@ -85,7 +84,6 @@ const Home = () => {
           />
         }
       />
-      <DiaryList diaryList={data} />
     </div>
   );
 };

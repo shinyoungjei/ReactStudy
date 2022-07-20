@@ -41,7 +41,7 @@ const Home = () => {
 
         // diaryList의 date가 firstDay와 lastDay안에 해당하는 배열을 만들어 data로 전달.
         setData(
-          diaryList.filter(it => firstDay <= it.date && it.date >= lastDay)
+          diaryList.filter(it => firstDay <= it.date && it.date <= lastDay)
         );
       }
     },
@@ -85,7 +85,7 @@ const Home = () => {
           />
         }
       />
-      <DiaryList diaryList={data} />
+      <DiaryList />
     </div>
   );
 };
