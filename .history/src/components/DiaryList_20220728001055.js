@@ -19,22 +19,6 @@ const ControlMenu = ({ value, onChange, optionList }) => {
 const DiaryList = ({ diaryList }) => {
   const [sortType, setSortType] = useState("lastest");
 
-  const getProcessedDiaryList = () => {
-    // 정렬을 하기 위한 함수
-    const compare = (a, b) => {
-      if (sortType === "latest") {
-        return parseInt(b.date) - parseInt(a.date);
-      } else {
-        return parseInt(a.date) - parseInt(b.date);
-      }
-    };
-
-    // 원본 배열을 해치지 않고 복사해서 사용하기 위한 JSON
-    const copyList = JSON.parse(JSON.stringify(diaryList));
-    const sortedList = copyList.sort(compare);
-    return sortedList;
-  };
-
   return (
     <div className="DiaryList">
       <ControlMenu
@@ -42,7 +26,7 @@ const DiaryList = ({ diaryList }) => {
         onChange={setSortType}
         optionList={sortOptionList}
       />
-      {getProcessedDiaryList().map(it => (
+      {diaryList.map(it => (
         <div key={it.id}>{it.content}</div>
       ))}
     </div>

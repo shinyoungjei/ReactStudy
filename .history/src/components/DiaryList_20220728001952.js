@@ -42,7 +42,7 @@ const DiaryList = ({ diaryList }) => {
         onChange={setSortType}
         optionList={sortOptionList}
       />
-      {getProcessedDiaryList().map(it => (
+      {getProcessedDiaryList.map(it => (
         <div key={it.id}>{it.content}</div>
       ))}
     </div>
